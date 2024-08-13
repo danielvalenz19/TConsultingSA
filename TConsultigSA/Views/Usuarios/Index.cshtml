@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TConsultigSA.Models.Usuario>
+@{
+    ViewData["Title"] = "Borrar Tipo Cuenta";
+}
+
+<h2>Usuarios Recientemente Agregados</h2>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre de Usuario</th>
+            <th>Fecha de Creación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.NombreUsuario</td>
+                <td>@usuario.FechaCreacion.ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary mt-3" href="@Url.Action("Create")">Agregar Usuario</a>
+
+@section Scripts {
+    <script>
+        // Bootstrap 4 validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+}

@@ -1,0 +1,34 @@
+﻿@model TConsultigSA.Models.Usuario
+
+
+@{
+	ViewBag.Title = "Agregar Usuario";
+}
+
+<h2>Agregar Usuario</h2>
+
+<form asp-action="Create" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label asp-for="NombreUsuario" class="control-label"></label>
+        <input asp-for="NombreUsuario" class="form-control" required />
+        <div class="invalid-feedback">
+            Por favor, ingrese el nombre de usuario.
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Contraseña" class="control-label"></label>
+        <input asp-for="Contraseña" class="form-control" type="password" required />
+        <div class="invalid-feedback">
+            Por favor, ingrese la contraseña.
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rol" class="control-label"></label>
+        <input asp-for="Rol" class="form-control" required />
+        <div class="invalid-feedback">
+            Por favor, ingrese el rol del usuario.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary ml-2">Volver</a>
+</form>
