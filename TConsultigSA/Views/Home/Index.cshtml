@@ -1,8 +1,9 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Bienvenido, @User.Identity.Name</h2>
+
+<p>Esta es la página principal. ¡Has iniciado sesión con éxito!</p>
+
+<a href="/Login/Logout" class="btn btn-danger">Cerrar Sesión</a>

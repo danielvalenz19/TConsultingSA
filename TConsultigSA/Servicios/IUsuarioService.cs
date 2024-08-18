@@ -9,5 +9,7 @@ namespace TConsultigSA.Servicios
         Task<IEnumerable<Usuario>> GetUsuariosAsync();
         Task<Usuario> GetUsuarioByIdAsync(int id);
         Task AddUsuarioAsync(Usuario usuario);
+        Task<Usuario> GetUsuarioByNombreAsync(string nombre);
+
     }
 }

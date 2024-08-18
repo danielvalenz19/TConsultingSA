@@ -77,3 +77,4 @@ C:\Repositorios\C#\TConsultigSA\TConsultigSA\obj\Debug\net6.0\refint\TConsultigS
 C:\Repositorios\C#\TConsultigSA\TConsultigSA\obj\Debug\net6.0\TConsultigSA.pdb
 C:\Repositorios\C#\TConsultigSA\TConsultigSA\obj\Debug\net6.0\TConsultigSA.genruntimeconfig.cache
 C:\Repositorios\C#\TConsultigSA\TConsultigSA\obj\Debug\net6.0\ref\TConsultigSA.dll
+C:\Repositorios\C#\TConsultigSA\TConsultigSA\obj\Debug\net6.0\TConsultigSA.sourcelink.json

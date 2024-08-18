@@ -14,6 +14,7 @@ namespace TConsultigSA.Servicios
         public UsuarioService(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
+
         }
 
         private IDbConnection CreateConnection()
@@ -37,7 +38,17 @@ namespace TConsultigSA.Servicios
                 return await connection.QuerySingleOrDefaultAsync<Usuario>(sql, new { Id = id });
             }
         }
-    
+
+        public async Task<Usuario> GetUsuarioByNombreAsync(string nombreUsuario)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT * FROM Usuarios WHERE NombreUsuario = @NombreUsuario";
+                return await connection.QueryFirstOrDefaultAsync<Usuario>(sql, new { NombreUsuario = nombreUsuario });
+            }
+        }
+
+
         public async Task AddUsuarioAsync(Usuario usuario)
         {
             const string sql = @"
